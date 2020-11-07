@@ -1,0 +1,1 @@
+{"version":3,"file":"LegacyError.js","sourceRoot":"","sources":["../../../../src/types/errors/LegacyError.ts"],"names":[],"mappings":";;;AASA;;;;GAIG;AACH,SAAgB,aAAa,CAAC,KAAc;IAC3C,OAAO,CACL,KAAsB,CAAC,KAAK,KAAK,SAAS;QAC1C,KAAsB,CAAC,UAAU,KAAK,SAAS,CAChD,CAAC;AACH,CAAC;AALD,sCAKC"}
