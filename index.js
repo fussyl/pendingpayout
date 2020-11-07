@@ -4,6 +4,8 @@ const pendingPayouts = async (addr, depth) => {
     const endpoint = `http://localhost:8080/accounts/${addr}/staking-payouts?depth=${depth}`
     const response = await axios.get(endpoint);
     const allPending = response.data.erasPayouts.reduce((accAllPending, eraPayout) => {
+        // if the address doesn't have any payout, just return 0
+        if(eraPayout.payouts == null) return 0;
         const eraPending = eraPayout.payouts.reduce((accEraPending, payout) => {
            return payout.claimed ? accEraPending : accEraPending + Number(payout.nominatorStakingPayout);
         }, 0);
